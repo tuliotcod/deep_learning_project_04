@@ -21,7 +21,7 @@ def test_text_to_ids(text_to_ids):
     target_vocab_to_int, target_int_to_vocab = helper.create_lookup_tables(test_target_text)
 
     test_source_id_seq, test_target_id_seq = text_to_ids(test_source_text, test_target_text, source_vocab_to_int, target_vocab_to_int)
-
+    
     assert len(test_source_id_seq) == len(test_source_text.split('\n')),\
         'source_id_text has wrong length, it should be {}.'.format(len(test_source_text.split('\n')))
     assert len(test_target_id_seq) == len(test_target_text.split('\n')), \
